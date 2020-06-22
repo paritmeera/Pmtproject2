@@ -34,7 +34,9 @@ public class AgentController {
 	@RequestMapping(value="/add", method=RequestMethod.POST, produces="Application/json")
 	public Response addAgent( @Valid @RequestBody  AgentModel  agentmodel) throws Exception 
 	{
+		System.out.println("cloning........................");
 		return agentService.addAgent(agentmodel);
+		
 		
 	}
 	
